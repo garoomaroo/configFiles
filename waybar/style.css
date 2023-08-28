@@ -1,0 +1,174 @@
+* {
+    border: none;
+    border-radius: 0;
+    font-family: Roboto, Helvetica, Arial, sans-serif;
+    font-size: 13px;
+    min-height: 0;
+}
+
+window#waybar {
+    background: rgba(43, 48, 59, 0.35);
+    border-bottom: 3px solid rgba(43, 48, 59, 0.35);
+    color: white;
+}
+
+tooltip {
+  background: rgba(43, 48, 59, 0.5);
+  border: 1px solid rgba(100, 114, 125, 0.5);
+}
+tooltip label {
+  color: white;
+}
+
+#workspaces button {
+    padding: 0 5px;
+    background: transparent;
+    color: white;
+    border-bottom: 3px solid #bbbbbb;
+}
+
+#workspaces button.focused {
+    background: #64727D;
+    border-bottom: 3px solid white;
+}
+
+#mode, #clock, #battery {
+    padding: 0 10px;
+}
+
+#mode {
+    background: #64727D;
+    border-bottom: 3px solid white;
+}
+
+#clock {
+    background-color: transparent;
+    color: white;
+    border-bottom: 3px solid gray;
+}
+
+#battery {
+    /* background-color: #ffffff; */
+    color: white;
+    background: transparent;
+    border-bottom: 3px solid white;
+}
+
+#battery.charging {
+    color: white;
+    background: transparent;
+    /* background-color: #26A65B; */
+    border-bottom: 3px solid green;
+}
+
+@keyframes blink {
+    to {
+        /*background-color: #ffffff;*/
+        color: black;
+	border-bottom: 3px solid white;
+    }
+}
+
+#battery.warning:not(.charging) {
+    background: #f53c3c;
+    color: white;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+#pulseaudio {
+	color: white;
+	border-bottom: 3px solid #f1c40f;
+}
+#pulseaudio.muted {
+	border-bottom: 3px solid #90b1b1;
+	color: white;
+}
+
+#network {
+	color: white;
+	border-bottom: 3px solid #2980b9;
+}
+#network.disconnected {
+	border-bottom: #f53c3c;
+	color: white;
+}
+
+#cpu {
+	color: white;
+	border-bottom: 3px solid #2ecc71;
+}
+
+#memory {
+	color: white;
+	border-bottom: 3px solid #9b59b6;
+}
+
+#disk {
+	color: white;
+	border-bottom: 3px solid #964B00;
+}
+
+#backlight {
+	color: white;
+	border-bottom: 3px solid #90b1b1;
+}
+
+#custom-media {
+	border-bottom: 3px solid #66cc99;
+	color: white;
+	min-width: 100px;
+}
+
+#custom-media.custom-spotify {
+	border-bottom: 3px solid #66cc99;
+}
+
+#custom-media.custom-vlc {
+	border-bottom: 3px solid #ffa000;
+}
+
+#temperature {
+	border-bottom: 3px solid #f0932b;
+}
+#temperature.critical {
+	border-bottom: 3px solid#eb4d4b;
+}
+
+#tray {
+	border-bottom: 3px solid #2980b9;
+}
+#tray > .passive {
+	-gtk-icon-effect: dim;
+}
+#tray > .needs-attention {
+	-gtk-icon-effect: highlight;
+	border-bottom: 3px solid #eb4d4b;
+}
+
+#idle_inhibitor {
+	border-bottom: 3px solid #2d3436;
+}
+#idle_inhibitor.activated {
+	border-bottom: 3px solid #ecf0f1;
+}
+
+#mpd {
+	border-bottom: 3px solid #66cc99;
+}
+#mpd.disconnected {
+	border-bottom: 3px solid #f53c3c;
+}
+#mpd.stopped {
+	border-bottom: 3px solid #90b1b1;
+}
+#mpd.paused {
+	border-bottom: 3px solid#51a37a;
+}
+#language {
+	padding: 0 5px;
+	margin: 0 5px;
+	min-width: 16px;
+}
