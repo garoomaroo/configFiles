@@ -1,4 +1,4 @@
-PROMPT='[%F{red}%n%f@%F{red}%m%f %F{blue}%B%~%b%f]# '
+PROMPT='[%F{red}%n%f@%m%f %F{blue}%B%~%b%f]# '
 RPROMPT='[%F{yellow}%?%f]'
 
 # The following lines were added by compinstall
