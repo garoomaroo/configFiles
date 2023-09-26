@@ -1,7 +1,7 @@
 exec gsettings set org.gtk.Settings.FileChooser startup-mode cwd
 exec lxsession &
 exec mako &
-exec gsettings set org.gnome.desktop.interface gtk-theme "Arc-Dark" &
+exec gsettings set org.gnome.desktop.interface gtk-theme "Breeze-Dark" &
 exec gsettings set org.gnome.desktop.interface icon-theme "Arc" &
 exec gsettings set org.gnome.desktop.interface font-name "Cantarell 10" &
 
@@ -27,7 +27,8 @@ set $term alacritty
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
-set $menu BEMENU_BACKEND=wayland bemenu-run -B2 -l10 -M500 -cH30 --scrollbar autohide -wP "> " | xargs swaymsg exec --
+set $menu BEMENU_BACKEND=wayland bemenu-run -B2 -l10 -M500 -cH30 --scrollbar autohide -wP "> " --fn "Source Code Pro 10" | xargs swaymsg exec --
+set $alt_menu wofi -diImGS drun
 
 ### Output configuration
 #
@@ -82,6 +83,9 @@ exec swayidle -w \
 
     # Start your launcher
     bindsym $mod+d exec $menu
+
+    # Start alt_menu
+    bindsym $mod+Shift+d exec $alt_menu
 
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.

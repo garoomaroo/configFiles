@@ -1,7 +1,7 @@
 * {
     border: none;
     border-radius: 0;
-    font-family: Roboto, Helvetica, Arial, sans-serif;
+    font-family: NotoSans, SymbolsNerdFont;
     font-size: 13px;
     min-height: 0;
 }
@@ -29,7 +29,7 @@ tooltip label {
 
 #workspaces button.focused {
     background: #64727D;
-    border-bottom: 3px solid white;
+    border-bottom: 3px solid #bbbbbb;
 }
 
 #mode, #clock, #battery {
