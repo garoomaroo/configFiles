@@ -27,8 +27,9 @@ SAVEHIST=1000
 setopt beep
 bindkey -v
 # End of lines configured by zsh-newuser-install
-alias vi='nvim'
-alias doas='sudo'
 alias ls='eza --icons -Mah'
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+alias dwl='dwl -s somebar'
+
+# Uncomment if on Gentoo
+#alias emerge='emerge -a'
+source /usr/share/zsh/site-functions/zsh-syntax-highlighting.zsh
