@@ -13,7 +13,7 @@ constexpr int paddingY = 3;
 constexpr const char* font = "Source Code Pro 10";
 
 constexpr ColorScheme colorInactive = {Color(0xbb, 0xbb, 0xbb), Color(0x22, 0x22, 0x22)};
-constexpr ColorScheme colorActive = {Color(0xee, 0xee, 0xee), Color(0x99, 0x00, 0xaa)};
+constexpr ColorScheme colorActive = {Color(0xee, 0xee, 0xee), Color(0x1f, 0x09, 0x1c)};
 constexpr const char* termcmd[] = {"alacritty", nullptr};
 
 static std::vector<std::string> tagNames = {

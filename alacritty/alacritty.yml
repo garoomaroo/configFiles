@@ -69,7 +69,7 @@ window:
   #
   # Window opacity as a floating point number from `0.0` to `1.0`.
   # The value `0.0` is completely transparent and `1.0` is opaque.
-  opacity: 0.80
+  opacity: 1.0
 
 
   # Startup Mode (changes require restart)
@@ -134,7 +134,7 @@ font:
     #   - (macOS) Menlo
     #   - (Linux/BSD) monospace
     #   - (Windows) Consolas
-    family: Source Code Pro
+    family: JetBrainsMonoNerdFont
 
     # The `style` can be specified to pick a specific face.
     # style: Italic
@@ -145,7 +145,7 @@ font:
     #
     # If the bold family is not specified, it will fall back to the
     # value specified for the normal font.
-    family: Source Code Pro
+    family: JetBrainsMonoNerdFont
 
     # The `style` can be specified to pick a specific face.
     style: Bold Italic
@@ -156,7 +156,7 @@ font:
     #
     # If the italic family is not specified, it will fall back to the
     # value specified for the normal font.
-    family: Source Code Pro
+    family: JetBrainsMonoNerdFont
 
 
 
@@ -169,7 +169,7 @@ font:
     #
     # If the bold italic family is not specified, it will fall back to the
     # value specified for the normal font.
-    family: Source Code Pro
+    family: JetBrainsMonoNerdFont
 
     # The `style` can be specified to pick a specific face.
     style: Bold Italic
@@ -205,7 +205,9 @@ font:
 colors:
   # Default colors
   primary:
-    background: '#2b1f2f'
+    #    background: '#2b1f2f'
+    #    foreground: '#dcdcdc'
+    background: '#0f090f'
     foreground: '#dcdcdc'
 
 
@@ -457,7 +459,7 @@ cursor:
 #   - (Linux/BSD/macOS) `$SHELL` or the user's login shell, if `$SHELL` is unset
 #   - (Windows) powershell
 shell:
-  program: /usr/bin/zsh
+  program: /bin/zsh
   args:
       - -c
       - "neofetch && zsh"
