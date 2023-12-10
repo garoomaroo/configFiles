@@ -30,6 +30,9 @@ bindkey -v
 alias ls='eza --icons -Mah'
 alias dwl='dwl -s somebar'
 
-# Uncomment if on Gentoo
-#alias emerge='emerge -a'
+# Uncomment if using Wine flatpak
+#alias wine='flatpak run org.winehq.Wine'
+#alias winecfg='flatpak run org.winehq.Wine ~/.var/app/org.winehq.Wine/data/wine/drive_c/windows/system32/winecfg.exe'
+#alias winetricks='flatpak run --command="winetricks" org.winehq.Wine'
+
 source /usr/share/zsh/site-functions/zsh-syntax-highlighting.zsh
