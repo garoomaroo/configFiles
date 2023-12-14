@@ -29,14 +29,15 @@ bindkey -v
 # End of lines configured by zsh-newuser-install
 
 export QT_QPA_PLATFORM=xcb
+export EDITOR=vim
 
 alias ls='eza --icons -Mah'
 alias dwl='dwl -s somebar'
 alias cat='cat -n'
 
 # Uncomment if using Wine flatpak
-#alias wine='flatpak run org.winehq.Wine'
-#alias winecfg='flatpak run org.winehq.Wine ~/.var/app/org.winehq.Wine/data/wine/drive_c/windows/system32/winecfg.exe'
-#alias winetricks='flatpak run --command="winetricks" org.winehq.Wine'
+alias wine='flatpak run org.winehq.Wine'
+alias winecfg='flatpak run org.winehq.Wine ~/.var/app/org.winehq.Wine/data/wine/drive_c/windows/system32/winecfg.exe'
+alias winetricks='flatpak run --command="winetricks" org.winehq.Wine'
 
 source /usr/share/zsh/site-functions/zsh-syntax-highlighting.zsh
