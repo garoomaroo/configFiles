@@ -7,9 +7,8 @@ set cursorline
 set cursorcolumn
 set wildmenu
 set wildmode=list:longest
-
+set wildignore=*.docx,*.pptx,*.exe,*.png,*.jpg,*.gif,*.pdf,*.pyc,*.img,*.xlsx
 set tabstop=4
-
 set statusline=
 set statusline+=\ %F\ %M\ %y\ %r
 set statusline+=%=
