@@ -27,8 +27,12 @@ SAVEHIST=1000
 setopt beep
 bindkey -v
 # End of lines configured by zsh-newuser-install
+
+export QT_QPA_PLATFORM=xcb
+
 alias ls='eza --icons -Mah'
 alias dwl='dwl -s somebar'
+alias cat='cat -n'
 
 # Uncomment if using Wine flatpak
 #alias wine='flatpak run org.winehq.Wine'

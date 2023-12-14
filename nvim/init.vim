@@ -7,14 +7,15 @@
 set number
 
 call plug#begin("/home/blopes/.config/nvim/plugins")
+Plug 'vantreeseba/coc-haxe'
 Plug 'neovim/nvim-lspconfig'
-Plug 'williamboman/mason.nvim'
-Plug 'williamboman/mason-lspconfig.nvim'
-Plug 'hrsh7th/cmp-nvim-lsp'
-Plug 'hrsh7th/cmp-buffer'
-Plug 'hrsh7th/cmp-path'
-Plug 'hrsh7th/cmp-cmdline'
-Plug 'hrsh7th/nvim-cmp'
+"Plug 'williamboman/mason.nvim'
+"Plug 'williamboman/mason-lspconfig.nvim'
+"Plug 'hrsh7th/cmp-nvim-lsp'
+"Plug 'hrsh7th/cmp-buffer'
+"Plug 'hrsh7th/cmp-path'
+"Plug 'hrsh7th/cmp-cmdline'
+"Plug 'hrsh7th/nvim-cmp'
 Plug 'nvim-tree/nvim-tree.lua'
 Plug 'nvim-tree/nvim-web-devicons'
 Plug 'lewis6991/gitsigns.nvim'
@@ -23,20 +24,21 @@ Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
 Plug 'mfussenegger/nvim-dap'
 Plug 'rcarriga/nvim-dap-ui'
 Plug 'jose-elias-alvarez/null-ls.nvim'
-Plug 'jayp0521/mason-nvim-dap.nvim'
-Plug 'jayp0521/mason-null-ls.nvim'
-Plug 'RubixDev/mason-update-all'
+"Plug 'jayp0521/mason-nvim-dap.nvim'
+"Plug 'jayp0521/mason-null-ls.nvim'
+"Plug 'RubixDev/mason-update-all'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " For vsnip users.
-Plug 'hrsh7th/cmp-vsnip'
-Plug 'hrsh7th/vim-vsnip'
+"Plug 'hrsh7th/cmp-vsnip'
+"Plug 'hrsh7th/vim-vsnip'
 
 call plug#end()
 
-lua require("mason-update-all").setup()
+" lua require("mason-update-all").setup()
 
 lua <<EOF
-  -- Set up nvim-cmp.
+  --[[ Set up nvim-cmp.
   local cmp = require'cmp'
 
   cmp.setup({
@@ -97,13 +99,15 @@ lua <<EOF
       { name = 'cmdline' }
     })
   })
-
+--]]
   -- Set up lspconfig.
-  local capabilities = require('cmp_nvim_lsp').default_capabilities()
+--  local capabilities = require('cmp_nvim_lsp').default_capabilities()
   -- Replace <YOUR_LSP_SERVER> with each lsp server you've enabled.
-  require('lspconfig')['clangd'].setup {
-    capabilities = capabilities
-  }
+  require('lspconfig')['clangd'].setup{}
+
+  require('lspconfig')['haxe_language_server'].setup({
+  	cmd = {"node", "/home/blopes/haxe-language-server/bin/server.js"},
+  })
 
   require'lspconfig'.lua_ls.setup {
   on_init = function(client)
@@ -135,9 +139,11 @@ lua <<EOF
     return true
   end
 }
+  require'lspconfig'.luau_lsp.setup{
+	capabilities = capabilities
+  }
 
-  require("mason").setup()
-
+--require("mason").setup()
   -- disable netrw at the very start of your init.lua
 	vim.g.loaded_netrw = 1
 	vim.g.loaded_netrwPlugin = 1
@@ -196,5 +202,7 @@ nnoremap <silent> <Space>bb <Cmd>BufferOrderByBufferNumber<CR>
 nnoremap <silent> <Space>bd <Cmd>BufferOrderByDirectory<CR>
 nnoremap <silent> <Space>bl <Cmd>BufferOrderByLanguage<CR>
 nnoremap <silent> <Space>bw <Cmd>BufferOrderByWindowNumber<CR>
+
+inoremap <expr> <tab> coc#pum#visible() ? coc#pum#confirm() : "\<Tab>"
 
 colorscheme catppuccin-frappe
