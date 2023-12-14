@@ -1,0 +1,4 @@
+Place the coc-settings in the vim/ directory in
+$HOME/.vim/coc-settings.json
+
+Place the one in the nvim/ directory in $HOME/.config/nvim/coc-settings.json
