@@ -1,4 +1,5 @@
 set nocp
+set nocompatible
 filetype on
 filetype plugin on
 set number
@@ -9,10 +10,11 @@ set wildmenu
 set wildmode=list:longest
 set wildignore=*.docx,*.pptx,*.exe,*.png,*.jpg,*.gif,*.pdf,*.pyc,*.img,*.xlsx
 set tabstop=4
+set shiftwidth=4
 set statusline=
 set statusline+=\ %F\ %M\ %y\ %r
 set statusline+=%=
-set statusline+=\ line\ %l,\ col\ %c,\ %p%%
+set statusline+=\ line\ %l,\ col\ %c;\ %p%%\ 
 set laststatus=2
 
 call plug#begin('~/.vim/plugged')
@@ -22,6 +24,7 @@ call plug#begin('~/.vim/plugged')
 	Plug 'jdonaldson/vaxe'
 	Plug 'bfrg/vim-cpp-modern'
 	Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
+	Plug 'davisdude/vim-love-docs'
 call plug#end()
 
 inoremap <expr> <tab> coc#pum#visible() ? coc#pum#confirm() : "\<Tab>"
