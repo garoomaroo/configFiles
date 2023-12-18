@@ -1,6 +1,6 @@
 exec gsettings set org.gtk.Settings.FileChooser startup-mode cwd
 exec lxsession &
-exec gentoo-pipewire-launcher
+exec gentoo-pipewire-launcher restart
 exec mako &
 exec gsettings set org.gnome.desktop.interface gtk-theme "Arc-Dark" &
 exec gsettings set org.gnome.desktop.interface icon-theme "Arc" &
