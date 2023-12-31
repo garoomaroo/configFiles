@@ -1,0 +1,27 @@
+[shell]
+program = "/bin/zsh"
+
+[env]
+EDITOR = "/usr/bin/vim"
+TERM = "alacritty"
+
+[window]
+decorations = "None"
+opacity = 0.95
+blur = true
+class = { instance = "Alacritty", general = "Alacritty" }
+
+[font]
+normal = { family = "JetBrainsMonoNerdFont", style = "Regular" }
+bold = { family = "JetBrainsMonoNerdFont", style = "Bold" }
+italic = { family = "JetBrainsMonoNerdFont", style = "Italic" }
+bold_italic = { family = "JetBrainsMonoNerdFont", style = "Bold Italic" }
+size = 11.0
+
+[colors.primary]
+foreground = "#dcdcdc"
+background = "#0f090f"
+
+[cursor.style]
+shape = "Underline"
+blinking = "On"
