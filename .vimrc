@@ -27,7 +27,6 @@ call plug#begin('~/.vim/plugged')
 	Plug 'jdonaldson/vaxe'
 	Plug 'bfrg/vim-cpp-modern'
 	Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
-	Plug 'jeffkreeftmeijer/vim-dim', { 'as': 'dim' }
 	Plug 'davisdude/vim-love-docs'
 call plug#end()
 
@@ -38,5 +37,6 @@ let g:cpp_attributes_highlight = 1
 let g:cpp_member_highlight = 1
 
 " For this theme to work, you have to compile Vim with Lua support (On Gentoo,
-" just enable the 'lua' USE flag on app-editors/vim)
+" just enable the 'lua' USE flag on app-editors/vim, idk how to do it anywhere
+" else)
 colorscheme catppuccin-mocha

@@ -28,12 +28,18 @@ setopt beep
 bindkey -v
 # End of lines configured by zsh-newuser-install
 
-export QT_QPA_PLATFORM=xcb
-export EDITOR=vim
+# Enable ADB libusb support
+export ADB_LIBUSB=1
+export EDITOR=nvim
+export PATH=$PATH:/home/blopes/.cargo/bin:/home/blopes/.dotnet/tools
 
 alias ls='eza --icons -Mah'
 alias dwl='dwl -s somebar'
 alias cat='cat -n'
+
+bindkey "^[[H" beginning-of-line
+bindkey "^[[F" end-of-line
+bindkey "^[[3~" delete-char
 
 # Uncomment if using Wine flatpak
 #alias wine='flatpak run org.winehq.Wine'

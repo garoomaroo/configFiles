@@ -1,13 +1,16 @@
+import = [
+	"~/.config/alacritty/themes/themes/midnight-haze.toml"
+]
+
 [shell]
 program = "/bin/zsh"
 
 [env]
-EDITOR = "/usr/bin/vim"
+EDITOR = "/usr/bin/nvim"
 TERM = "alacritty"
 
 [window]
-decorations = "None"
-opacity = 0.95
+opacity = 0.65
 blur = true
 class = { instance = "Alacritty", general = "Alacritty" }
 
@@ -16,12 +19,19 @@ normal = { family = "JetBrainsMonoNerdFont", style = "Regular" }
 bold = { family = "JetBrainsMonoNerdFont", style = "Bold" }
 italic = { family = "JetBrainsMonoNerdFont", style = "Italic" }
 bold_italic = { family = "JetBrainsMonoNerdFont", style = "Bold Italic" }
-size = 11.0
+size = 11.25
 
-[colors.primary]
-foreground = "#dcdcdc"
-background = "#0f090f"
+#[colors.primary]
+#foreground = "#dcdcdc"
+#background = "#0f090f"
 
 [cursor.style]
-shape = "Underline"
+shape = "Block" # Can be "Block", "Underline" or "Beam"
 blinking = "On"
+
+[keyboard]
+bindings = [
+	{ key = "C", mods = "Control|Shift", action = "CopySelection" },
+	{ key = "V", mods = "Control|Shift", action = "PasteSelection" },
+	{ key = "N", mods = "Control|Shift", action = "CreateNewWindow" },
+]
