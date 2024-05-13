@@ -1,3 +1,5 @@
+Don't use this, I'm on Codeberg now: [https://codeberg.org/blopes](url)
+
 # configFiles
 My personal configfiles for GTK, Hyprland, Sway, etc.
 # Installation
